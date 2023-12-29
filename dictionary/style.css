@@ -1,0 +1,234 @@
+:root {
+	/* Light Mode Colors */
+	--light-primary-color: #3498db;
+	--light-secondary-color: #2ecc71;
+	--light-accent-color: #e74c3c;
+	--light-background-color: #ecf0f1;
+	--light-text-color: #34495e;
+	--light-border-color: #bdc3c7;
+	--light-link-color: #2980b9;
+
+	/* Dark Mode Colors */
+	--dark-primary-color: #1a5276;
+	--dark-secondary-color: #27ae60;
+	--dark-accent-color: #c0392b;
+	--dark-background-color: #151b20;
+	--dark-text-color: #ecf0f1;
+	--dark-border-color: #7f8c8d;
+	--dark-link-color: #3498db;
+
+	/* Common Colors */
+	--common-link-hover-color: #1abc9c;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		sans-serif;
+	background-color: var(--light-background-color);
+	color: var(--light-text-color);
+}
+
+body.dark {
+	background-color: var(--dark-background-color);
+	color: var(--dark-text-color);
+}
+
+.container {
+	max-width: 1100px;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 2rem;
+	margin: 0 auto;
+}
+
+header {
+	padding: 3rem 0;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.content {
+	display: flex;
+	align-items: center;
+}
+.content select {
+	border: none;
+	padding: 0.5rem;
+	margin-right: 2rem;
+	background-color: var(--light-primary-color);
+	color: var(--light-background-color);
+	border-radius: 10px;
+	font-size: large;
+}
+.content img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 25px;
+	margin-right: 1rem;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+/* input[type="checkbox"] {
+	display: none;
+} */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	/* inset: 0; */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--light-primary-color);
+	border-radius: 34px;
+}
+
+.slider::before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	border-radius: 50%;
+	left: 2px;
+	bottom: 0;
+	background-color: var(--light-background-color);
+	transition: 0.4s ease-in-out;
+}
+/* Rounded sliders */
+/* .slider.round {
+	border-radius: 34px;
+} */
+
+input:checked + .slider {
+	background-color: var(--light-accent-color);
+}
+input:checked + .slider::before {
+	transform: translateX(26px);
+}
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--dark-link-color);
+}
+
+form {
+	margin: 2.5rem 0;
+	position: relative;
+}
+
+form input {
+	width: 100%;
+	background-color: var(--dark-text-color);
+	padding: 1.2rem 0.8rem;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.3rem;
+	font-family: inherit;
+}
+
+form input:focus {
+	border: 1px solid var(--light-link-color);
+}
+
+form img {
+	width: 2rem;
+	height: 2rem;
+	object-fit: cover;
+	top: 50%;
+	left: 96%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	cursor: pointer;
+}
+.result_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.result_header h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+.result_header p {
+	color: var(--dark-link-color);
+}
+.result_header img {
+	cursor: pointer;
+}
+
+.result_header img:hover {
+	opacity: 0.7;
+}
+.result_noun,
+.result_verb {
+	margin: 4rem 0;
+}
+.result_noun h3,
+.result_verb h3 {
+	font-size: 1.5rem;
+	margin-bottom: 2.5rem;
+	position: relative;
+}
+
+.result_noun h3::after,
+.result_verb h3::after,
+.result_synonyms h3::after {
+	position: absolute;
+	content: "";
+	width: 92%;
+	height: 2px;
+	background-color: var(--light-border-color);
+	top: 15px;
+	bottom: 0;
+	right: 0;
+}
+
+.result_noun > p,
+.result_verb > p {
+	color: var(--light-link-color);
+	margin-bottom: 10px;
+}
+.result_meanings {
+	margin: 2rem 0;
+}
+
+.result_meanings li {
+	list-style-type: none;
+	margin: 1rem 0;
+	display: flex;
+	align-items: center;
+	margin-left: 2rem;
+}
+.result_meanings li::before {
+	content: "\2022";
+	color: var(--light-link-color);
+	font-size: 1.5rem;
+	width: 1rem;
+	padding-right: 1.5rem;
+}
+
+.result_synonyms {
+	display: flex;
+	gap: 10px;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
