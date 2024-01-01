@@ -24,12 +24,9 @@ We understand the importance of eye comfort during late-night study sessions, so
 - Parts of Speech: Understand how words function in sentences and gain a deeper grasp of their usage.
 
 ### 📷 Screenshots:
+![FancyWM_9sLOi8Cqm7](https://github.com/shouravrahman/vanilla_js_flex/assets/73746355/5322aff1-ec17-4ad2-87d1-c4b61c8f330a)
 
-Dark Mode:
-![Dark Mode](link_to_dark_mode_screenshot)
 
-Search Results:
-![Search Results](link_to_search_results_screenshot)
 
 ### 👨‍💻 Technologies Used:
 
